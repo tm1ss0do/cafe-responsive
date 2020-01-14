@@ -1,0 +1,140 @@
+.p-modal{
+  background: red;
+  &__container{
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    @include mq() {
+      min-height: 180px;
+    }
+  }
+  &__img-block{
+    width: 40%;
+  }
+  &__img{
+    width: 100%;
+  }
+  &__info{
+    width: 50%;
+    flex-direction: column;
+    height: 450px;
+    padding: 50px;
+    box-sizing: border-box;
+    @include mq() {
+      padding: 10px;
+      height: 150px;
+
+      min-height: 200px;
+    }
+  }
+  &__text{
+    font-size: $font-size_default;
+    font-family: $font-family_text;
+    margin-bottom: 10px;
+    min-height: 200px;
+
+
+    @include mq() {
+      min-height: 0;
+      max-height: 120px;
+      font-size: 14px;
+    }
+  }
+  &__title{
+    font-size: $font-size_xl;
+    font-family: $font-family_sectiont-itle;
+    margin-bottom: 20px;
+
+
+    @include mq() {
+      margin-bottom: 10px;
+    }
+  }
+  &__price{
+    font-size: 16px;
+    margin-top: 20px;
+    font-family: $font-family_text;
+    text-align: right;
+    margin: 20px;
+
+    @include mq() {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+.p-modal-btn{
+  align-items: center;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  &__fav{
+  width: 30%;
+  height: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+    & i{
+        font-size: $font-size_3l;
+        line-height: 50px;
+          &:hover{
+            cursor: pointer;
+          }
+
+          @include mq() {
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            font-size: 25px;
+          }
+      }
+  }
+  &__heart{
+    position: absolute;
+    left: 40px;
+    z-index: 1;
+    @include mq(md) {
+      left: 10px;
+    }
+    &.is-active{
+      color: #ffb6c1;
+      animation: favPushAnimation 0.2s ease-out;
+    }
+  }
+
+  @keyframes favPushAnimation{
+    0%{
+      transform: scale(.7);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  &__form{
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    width: 70%;
+  }
+  &__button{
+    border: none;
+    display: block;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    background: $sogo-color;
+    &:hover{
+      cursor: pointer;
+      background: $tamaki-color;
+      transition: all  2s ease-out;
+    }
+
+    @include mq() {
+      height: 40px;
+    }
+  }
+}

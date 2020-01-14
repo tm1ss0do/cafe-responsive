@@ -1,0 +1,49 @@
+/* HeaderLogo
+   ----------------------------------------------------------------- */
+
+.c-top-logo{
+  width: 50%;
+  line-height: 80px;
+  align-items: center;
+  color: #DDD085;
+  font-size: $font-size_3l;
+  @include mq($breakpoint: sm) {
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+    font-size: $font-size_default;
+  }
+}
+/* HeroLogo
+   ----------------------------------------------------------------- */
+
+.c-hero-logo{
+  height: 200px;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  color: #DDD085;
+  font-size: $font-size_6l;
+  @include mq() {
+    position: absolute;
+    top: 15%;
+    font-size: $font-size_3l;
+  }
+  @include mq(md) {
+    position: absolute;
+    top: 15%;
+  }
+}
+.c-hero-text__container{
+  position: relative;
+  top: 40%;
+  color: #EFE;
+  opacity: 0.4;
+  font-size: $font-size_3l;
+  @include mq() {
+    font-size: $font-size_l;
+  }
+  @include mq(md) {
+    font-size: $font-size_l;
+  }
+}

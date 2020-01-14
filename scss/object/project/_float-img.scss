@@ -1,0 +1,68 @@
+.c-float-img{
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  position:absolute;
+  animation: 3s infinite alternate float;
+  @include mq(){
+    height: 100px;
+    width: 100px;
+  }
+  &.iori{
+    right: 15%;
+    top: 70%;
+    @include mq() {
+      right: 0;
+      top: 86%;
+    }
+    @include mq(md) {
+      right: 0;
+    }
+  }
+  &.yamato{
+    top: -40%;
+    @include mq() {
+      left: 0;
+      top: -25%;
+    }
+  }
+  &.mitsuki{
+    right: 15%;
+    top: 60%;
+    @include mq() {
+      right: 0;
+      top: 85%;
+    }
+    @include mq(md) {
+      right: 0%;
+      top: 80%;
+    }
+  }
+  &.nagi{
+    right: 20%;
+    top: -20%;
+    @include mq() {
+      right: 0;
+      top: -13%;
+    }
+    @include mq(md) {
+      right: 0;
+    }
+  }
+  &.riku{
+    top: 70%;
+    @include mq() {
+      top: 92%;
+    }
+  }
+}
+
+@keyframes float {
+  from {
+    margin-top: 0%;
+
+  }
+  to {
+    margin-top: 1%;
+  }
+}

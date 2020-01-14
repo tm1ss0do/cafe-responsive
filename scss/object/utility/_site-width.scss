@@ -1,0 +1,17 @@
+/* site-width
+   ----------------------------------------------------------------- */
+$site-width: 70%;
+$site-width-sm: 95%;
+$site-width-md: 95%;
+
+.site-width{
+  width: $site-width;
+
+  @include mq() {
+    width: $site-width-sm;
+  }
+
+  @include mq($breakpoint: md) {
+    width: $site-width-md;
+  }
+}

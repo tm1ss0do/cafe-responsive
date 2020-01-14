@@ -1,0 +1,19 @@
+#hero{
+  height: 170vh;
+  flex-direction: column;
+  align-items : center;
+  margin-bottom: 20px;
+  background-image: url('../dist/images/hero-baner.png');
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mq() {
+    height: 280px;
+    background-size: contain;
+  }
+  @include mq(md) {
+    height: 450px;
+    background-size: contain;
+  }
+}

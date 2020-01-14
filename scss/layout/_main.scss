@@ -1,0 +1,25 @@
+#topics,#pictures,#menu,#drink,#contact{
+  justify-content : center;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+#pictures{
+  padding: 30px 0;
+  background: $sogo-color;
+  height: 700px;
+  @include mq() {
+    height: 450px;
+  }
+}
+#menu{
+  height: 300px;
+}
+#drink{
+  padding: 30px 0;
+  background: $tamaki-color;
+  height: 600px;
+  @include mq(md) {
+    height: 400px;
+  }
+}

@@ -1,0 +1,82 @@
+/*Menu
+   ----------------------------------------------------------------- */
+.c-menu{
+  width: 50%;
+  align-items: center;
+  font-size: $font-size_l;
+    & li{
+      line-height: 80px;
+      &:hover{
+        background: $font-color_sub;
+        transition: all .5s;
+      }
+      @include mq() {
+        display: none;
+      }
+    }
+    & a{
+      display: block;
+      padding: 0px 20px;
+      transition: all 0.5s;
+      &:hover{
+        color: $font-color_back;
+        transition: all 0.5s;
+      }
+    }
+    &.flex{
+      @include mq() {
+        display: none;
+      }
+      @include mq($breakpoint: md) {
+        display: none;
+      }
+    }
+}
+/*HumbergerMenu
+   ----------------------------------------------------------------- */
+.c-menu-res{
+  width: 100vw;
+  height: 100vh;
+  padding: 150px 0;
+  text-align: center;
+  flex-direction: column;
+  font-size: $font-size_l;
+  background: #eee;
+  z-index: 10;
+  opacity: 0.7;
+  position: absolute;
+  right: -103%;
+  transition: .5s;
+  box-sizing: border-box;
+  & li{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    margin: 10px 0;
+    &:hover{
+      background: $font-color_sub;
+      transition: all .5s;
+    }
+    @include mq(md) {
+      font-size: $font-size_xxl;
+      margin: 20px 0;
+    }
+  }
+    & a{
+      padding: 0px 20px;
+      transition: all 0.5s;
+      &:hover{
+        color: $font-color_back;
+        transition: all 0.5s;
+      }
+    }
+
+    &.is-menu-active{
+      transition: .5s;
+      transform: translateX(-103%);
+      z-index: 2;
+    }
+
+
+
+}

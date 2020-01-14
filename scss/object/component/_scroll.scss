@@ -1,0 +1,53 @@
+.c-scroll{
+  margin-top: 50px;
+  &__link{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+  }
+  &__img{
+    transition: all 1s;
+    height: 450px;
+    &:hover{
+      transform: scale(1.1,1.1);
+      transition: all 1s;
+    }
+    @include mq() {
+      height: 250px;
+    }
+  }
+  &__left,&__right{
+    font-size: 40px;
+    line-height: 40px;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 40px;
+    padding: 10px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    background: transparent;
+    &:hover{
+      opacity: 0.5;
+      outline: none;
+      background: transparent;
+    }
+  }
+  &__left{
+    left: 0px;
+    z-index: 1;
+  }
+  &__right{
+    right: 0px;
+  }
+}

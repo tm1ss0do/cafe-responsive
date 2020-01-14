@@ -1,0 +1,27 @@
+.c-form{
+  flex-direction: column;
+  width: 50%;
+  margin: 50px auto;
+  padding: 30px;
+  background: #eee;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  &__text,&__textarea,&__submit{
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #eee;
+    font-size: $font-size_default;
+  }
+  &__submit{
+    background: linear-gradient($sogo-color,$tamaki-color);
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  @include mq() {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}

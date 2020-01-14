@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+/* Header
+   ----------------------------------------------------------------- */
+$header-height: 80px;
+#header{
+  height: $header-height;
+  width: 100%;
+  justify-content : center;
+  background: none;
+  position: fixed;
+  z-index: 2;
+  @include mq($breakpoint: sm) {
+    height: 40px;
+  }
+  &.is-float-active{
+    background-color:rgba(238,238,238,0.6);
+    transition: all 0.5s;
+  }
+}

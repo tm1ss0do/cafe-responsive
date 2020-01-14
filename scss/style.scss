@@ -1,0 +1,90 @@
+/* ==========================================================================
+   メインCSS
+   ========================================================================== */
+
+/* 変数
+   ----------------------------------------------------------------- */
+   $font-color_default : #030303;
+   $font-color_sub : #707070;
+   $font-color_back : #fff;
+
+   $font-family_sectiont-itle: 'Libre Baskerville', serif, 'Bitter', serif;
+   $font-family_text: 'Source Sans Pro', 'Noto Sans JP', sans-serif;
+
+   $font-size_s: 12px;
+   $font-size_m: 14px;
+   $font-size_default: 16px;
+   $font-size_l: 18px;
+   $font-size_xl: 24px;
+   $font-size_xxl: 30px;
+   $font-size_3l: 38px;
+   $font-size_6l: 60px;
+
+   $sogo-color: #DDD0E6;
+   $tamaki-color: #f5deb3;
+
+   /*
+      $space_s: 5px;
+      $space_m: 10px;
+      $space_l: 15px;
+      $space_xl: 20px;
+      $space_xxl: 30px;
+      $space_3l: 40px;
+
+      $font-family_corp: 'Amatic SC', cursive;
+
+
+      */
+
+  $breakpoints: (
+    'sm': 'screen and (max-width: 414px)',
+    'md': 'screen and (min-width:415px) and (max-width: 768px)',
+    'lg': 'screen and (min-width:769px) and (max-width: 1000px)',
+    'xl': 'screen and (min-width:1001px) and (max-width: 1200px)',
+  ) !default;
+
+  @mixin mq($breakpoint: sm){
+    @media #{map-get($breakpoints,$breakpoint)} {
+      @content;
+    }
+  }
+
+/* ==========================================================================
+      Foundation
+   ========================================================================== */
+
+/* Base
+   ----------------------------------------------------------------- */
+body{
+  font-size: $font-size_default;
+  @include mq() {
+    font-size: $font-size_m;
+  }
+}
+a{
+    text-decoration: none;
+    color: $font-color_default;
+  }
+
+/* インポート
+   ----------------------------------------------------------------- */
+
+   @import "layout/header";
+   @import "layout/hero";
+   @import "layout/main";
+   @import "layout/footer";
+   @import "object/component/form";
+   @import "object/component/logo";
+   @import "object/component/menu";
+   @import "object/component/section-title";
+   @import "object/component/container";
+   @import "object/component/scroll";
+   @import "object/component/humberger";
+   @import "object/project/float-img";
+   @import "object/project/topics";
+   @import "object/project/member";
+   @import "object/project/goods";
+   @import "object/project/modal";
+   @import "object/utility/site-width";
+   @import "object/utility/flex";
+   @import "object/utility/image-width";

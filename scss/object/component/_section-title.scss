@@ -1,0 +1,28 @@
+.c-section-title{
+  text-align: center;
+  font-family: $font-family_sectiont-itle;
+  font-size: $font-size_3l;
+  padding: 20px 0;
+
+  & span{
+    display: inline-block;
+    background: #fff;
+    padding: 0 10%;
+    position: relative;
+    z-index: 1;
+    &.music{
+        background: $sogo-color;
+    }
+    &.goods{
+        background: $tamaki-color;
+    }
+  }
+  &:before{
+    border-top: 5px solid #707070;
+    content: "";
+    display: block;
+    position: relative;
+    top: 20px;
+    z-index: 0;
+  }
+}
